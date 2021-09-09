@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+.main {
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  padding: 3rem;
+  background-color: rgba(13, 54, 27, 0.432);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.493);
+  width: 70rem;
+  height: 70rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.button {
+  background-color: rgb(179, 179, 179);
+  font-size: 3rem;
+  border-radius: 10%;
+  border: none;
+}
+.button:hover,
+.button:active {
+  background-color: #e7f1f5;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  padding-right: 2rem;
+  background-color: azure;
+  grid-column: 1/-1;
+}
+.tap {
+  font-size: 2.8rem;
+  color: rgba(0, 0, 0, 0.521);
+}
+.score {
+  font-size: 3.4rem;
+}
+.el-0 {
+  grid-column: 2;
+  grid-row: 6;
+}
+.el-1 {
+  grid-column: 1;
+  grid-row: 5;
+}
+.el-2 {
+  grid-column: 2;
+  grid-row: 5;
+}
+.el-3 {
+  grid-column: 3;
+  grid-row: 5;
+}
+.el-4 {
+  grid-column: 1;
+  grid-row: 4;
+}
+.el-5 {
+  grid-column: 2;
+  grid-row: 4;
+}
+.el-6 {
+  grid-column: 3;
+  grid-row: 4;
+}
+.el-7 {
+  grid-column: 1;
+  grid-row: 3;
+}
+.el-8 {
+  grid-column: 2;
+  grid-row: 3;
+}
+.el-9 {
+  grid-column: 3;
+  grid-row: 3;
+}
+.el-equal {
+  grid-column: 3;
+  grid-row: 6;
+}
+.el-plus {
+  grid-column: 4;
+  grid-row: 6;
+}
+.el-minus {
+  grid-column: 4;
+  grid-row: 5;
+}
+.el-comma {
+  grid-column: 1;
+  grid-row: 6;
+}
+.el-multiplication {
+  grid-column: 4;
+  grid-row: 4;
+}
+.el-division {
+  grid-column: 4;
+  grid-row: 3;
+}
+.el-delete {
+  grid-column: 1;
+  grid-row: 2;
+}
