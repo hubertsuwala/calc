@@ -28,7 +28,9 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
-.button {
+.button,
+.operation,
+.el-delete {
   background-color: rgb(179, 179, 179);
   font-size: 3rem;
   border-radius: 10%;
@@ -48,6 +50,7 @@ body {
   padding-right: 2rem;
   background-color: azure;
   grid-column: 1/-1;
+  height: 13rem;
 }
 .tap {
   font-size: 2.8rem;
