@@ -27,6 +27,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+  overflow: hidden;
 }
 .button,
 .operation,
@@ -46,18 +47,28 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  gap: 2rem;
+  gap: 1rem;
   padding-right: 2rem;
   background-color: azure;
   grid-column: 1/-1;
   height: 13rem;
+  overflow: hidden;
 }
-.tap {
+.previous-number {
   font-size: 2.8rem;
+  height: 2.8rem;
   color: rgba(0, 0, 0, 0.521);
+  /* background-color: cadetblue; */
 }
 .score {
-  font-size: 3.4rem;
+  font-size: 3.2rem;
+  height: 3.2rem;
+  /* background-color: blue; */
+}
+.math-sign {
+  font-size: 2.8rem;
+  height: 2.8rem;
+  /* background-color: brown; */
 }
 .el-0 {
   grid-column: 2;
