@@ -12,31 +12,33 @@ const operator = document.querySelectorAll('.operator');
 let result = '';
 let nowy = '';
 const displayNumbers = function () {
+  //condition dot
   if (this.textContent === '.' && score.textContent.includes('.')) return;
   if (this.textContent === '.' && score.textContent === '')
     return (score.textContent = '0.');
+  //condition press more then once 0
   if (this.textContent === '0' && score.textContent === '0')
     return (score.textContent = '0.');
-  if (result == '') return (score.textContent += this.textContent);
-  result = '0';
-  console.log(result);
-  console.log(score.textContent);
-  score.textContent += this.textContent;
-  //  ? (score.textContent += this.textContent) : (result = '');
+
+  score.textContent = nowy += this.textContent;
 };
 
 const operate = function () {
-  if (score.textContent === '' && this.textContent === '') {
+  if (score.textContent === '' && this.textContent === '-') {
+    nowy = '-';
     score.textContent = '-';
+    return;
   }
-  if (score.textContent === '') return;
-  // score.textContent += result + this.textContent;
+  if (score.textContent === '-' && this.textContent !== '') {
+    console.log('fsdfsf');
+  }
   if (mathSign.textContent !== '') {
     showResult();
   }
   previousNumber.textContent = score.textContent;
   mathSign.textContent = this.textContent;
   score.textContent = '';
+  nowy = '';
 };
 
 const showResult = function () {
@@ -54,32 +56,22 @@ const showResult = function () {
       break;
     case '/':
       score.textContent === '0'
-        ? (result = '')
+        ? (result = 'DO NOT DO IT!!!')
         : (result = +previousNumber.textContent / +score.textContent);
       break;
   }
-  // if (score.textContent === '0') return;
-  if (result === '0') return;
 
   score.textContent = result;
   previousNumber.textContent = '';
   mathSign.textContent = '';
-  
-
-  // zrob kasowanie po nowym wprowadzeniu liczby po obliczeniu
-  // if (
-  //   result !== '0' &&
-  //   previousNumber.textContent === '' &&
-  //   mathSign.textContent === ''
-  // ) {
-  //   console.log('test');
-  // }
+  nowy = '';
 };
 const clearAll = function () {
   result = '';
   score.textContent = '';
   mathSign.textContent = '';
   previousNumber.textContent = '';
+  nowy = '';
 };
 
 number.forEach(btn => btn.addEventListener('click', displayNumbers));
