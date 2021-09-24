@@ -12,7 +12,7 @@ body {
   font-weight: 400;
 }
 .main {
-  background: linear-gradient(to top left, #28b487, #7dd56f);
+  background: linear-gradient(to top left, #22bd8c, #7dd56f);
   height: 100vh;
   display: flex;
   align-items: center;
