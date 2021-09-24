@@ -19,7 +19,7 @@ const displayNumbers = function () {
   //condition press more then once 0
   if (this.textContent === '0' && score.textContent === '0')
     return (score.textContent = '0.');
-
+  console.log(score.textContent);
   score.textContent = nowy += this.textContent;
 };
 
@@ -56,7 +56,7 @@ const showResult = function () {
       break;
     case '/':
       score.textContent === '0'
-        ? (result = 'DO NOT DO IT!!!')
+        ? (result = 'DO NOT DO THIS!!!')
         : (result = +previousNumber.textContent / +score.textContent);
       break;
   }
